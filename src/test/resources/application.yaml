@@ -1,0 +1,28 @@
+server:
+  port: 8080
+# config spring framework
+spring:
+# config h2 db, store to file ./data/demo
+  datasource:
+    url: jdbc:h2:file:./data/demo-test
+    username: demo
+    password: Aa@12345
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+# custom handler not found resource of spring => throw exception then custom by Controller Advice
+  mvc:
+    throw-exception-if-no-handler-found: true
+  web:
+    resources:
+      add-mappings: false
+# config log level
+logging:
+  level:
+    com:
+      sotatek: DEBUG
+    org:
+      springframework: INFO
+
