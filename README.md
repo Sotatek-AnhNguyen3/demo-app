@@ -122,7 +122,7 @@ Please refer  :
 Please refer :
 [ CQRS](https://www.baeldung.com/cqrs-event-sourcing-java)
 
-2. Scalability: 
+4.Scalability: 
 Scalability of a system is complex, it depends not only on the business of each system but also may need to change the design of the system.
 
 Example: 
