@@ -1,6 +1,5 @@
 package com.sotatek.demo.executable.application.controller.user;
 
-import com.sotatek.demo.adapter.mapper.UserMapper;
 import com.sotatek.demo.domain.entitiy.User;
 import com.sotatek.demo.domain.enums.ResponseCode;
 import com.sotatek.demo.executable.application.controller.user.dto.UserRegistrationRequest;

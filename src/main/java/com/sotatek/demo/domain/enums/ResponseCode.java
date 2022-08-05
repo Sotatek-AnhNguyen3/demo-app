@@ -2,8 +2,8 @@ package com.sotatek.demo.domain.enums;
 
 import com.sotatek.demo.domain.constants.ResponseStatus;
 import com.sotatek.demo.domain.exception.user.UserAlreadyExistsException;
-import com.sotatek.demo.exception.InternalServerException;
-import com.sotatek.demo.exception.NoSuchElementFoundException;
+import com.sotatek.demo.domain.exception.common.InternalServerException;
+import com.sotatek.demo.domain.exception.common.NoSuchElementFoundException;
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
 
@@ -12,12 +12,13 @@ import java.util.Optional;
 
 public enum ResponseCode {
     // Common exception
-    INTERNAL_SERVER_ERROR("ISE001", ResponseStatus.ERROR, "Internal Server Error", HttpStatus.INTERNAL_SERVER_ERROR, InternalServerException.class),
-    NO_SUCH_ELEMENT_FOUND_ERROR("NFE001", ResponseStatus.FAILED, "No Such Element Found", HttpStatus.NOT_FOUND, NoSuchElementFoundException.class),
+    INTERNAL_SERVER_ERROR("CEX001", ResponseStatus.ERROR, "Internal Server Error", HttpStatus.INTERNAL_SERVER_ERROR, InternalServerException.class),
+    NO_SUCH_ELEMENT_FOUND_ERROR("CEX002", ResponseStatus.FAILED, "No Such Element Found", HttpStatus.NOT_FOUND, NoSuchElementFoundException.class),
     // Argument validation
     METHOD_ARGUMENT_INVALID("MAI001", ResponseStatus.FAILED),
     // User exception
-    USER_ALREADY_EXISTS("UAE001", ResponseStatus.FAILED, "User Already Exists With Email", HttpStatus.BAD_REQUEST, UserAlreadyExistsException.class),
+    USER_ALREADY_EXISTS("USE001", ResponseStatus.FAILED, "User Already Exists With Email", HttpStatus.BAD_REQUEST, UserAlreadyExistsException.class),
+    // Constant
     SUCCESS("SUC001", ResponseStatus.PASSED),
     ERROR("ERR001", ResponseStatus.ERROR);
 
