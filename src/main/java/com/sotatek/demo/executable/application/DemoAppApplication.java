@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @OpenAPIDefinition(servers = {@Server(url = "/", description = "Default Server URL")})
-@SpringBootApplication(scanBasePackages = {"com.sotatek.demo"}) // disable spring security
+@SpringBootApplication(scanBasePackages = {"com.sotatek.demo"})
 @EnableJpaRepositories("com.sotatek.demo.domain.port")
 @EntityScan("com.sotatek.demo.domain.entitiy")
 public class DemoAppApplication {
