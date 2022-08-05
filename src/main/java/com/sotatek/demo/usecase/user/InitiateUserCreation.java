@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.transaction.annotation.Transactional;
 
 @RequiredArgsConstructor
 public class InitiateUserCreation {
@@ -62,5 +63,10 @@ public class InitiateUserCreation {
             logger.error("Exist user with request email {}", emailStd);
             throw new UserAlreadyExistsException();
         }
+    }
+
+    @Transactional
+    public void truncate() {
+        userRepository.truncate();
     }
 }

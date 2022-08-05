@@ -11,12 +11,12 @@ import javax.validation.constraints.NotNull;
 @Data
 @Builder
 public class UserRegistrationRequest {
-    @NotBlank(message = "email is required")
+    @NotBlank(message = "The email is required.")
     @Email(regexp = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$")
     private String email;
-    @NotBlank(message = "password is required")
+    @NotBlank(message = "The password is required.")
     private String password;
-    @NotNull(message = "salary is required")
-    @DecimalMin(value = "15000", message = "salary minimum is 15000 THB/month" )
+    @NotNull(message = "The salary is required.")
+    @DecimalMin(value = "15000", message = "The salary minimum is 15000 THB/month." )
     private Double salary;
 }

@@ -34,7 +34,21 @@ logging:
       sotatek: DEBUG
     org:
       springframework: INFO
+#actuator config
 management:
   security:
-    enabled: false
+    enabled: 'false'
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  info:
+    env:
+      enabled: 'true'
+info:
+  app:
+    version: 1.0.0
+    name: Spring Demo Application
+    description: This is Demo of Sotatek
+
 
