@@ -12,14 +12,14 @@ import java.util.Optional;
 
 public enum ResponseCode {
     // Common exception
-    INTERNAL_SERVER_ERROR("2", ResponseStatus.ERROR, "Internal Server Error", HttpStatus.INTERNAL_SERVER_ERROR, InternalServerException.class),
-    NO_SUCH_ELEMENT_FOUND_ERROR("CME001", ResponseStatus.FAILED, "No Such Element Found", HttpStatus.NOT_FOUND, NoSuchElementFoundException.class),
+    INTERNAL_SERVER_ERROR("ISE001", ResponseStatus.ERROR, "Internal Server Error", HttpStatus.INTERNAL_SERVER_ERROR, InternalServerException.class),
+    NO_SUCH_ELEMENT_FOUND_ERROR("NFE001", ResponseStatus.FAILED, "No Such Element Found", HttpStatus.NOT_FOUND, NoSuchElementFoundException.class),
     // Argument validation
     METHOD_ARGUMENT_INVALID("MAI001", ResponseStatus.FAILED),
     // User exception
     USER_ALREADY_EXISTS("UAE001", ResponseStatus.FAILED, "User Already Exists With Email", HttpStatus.BAD_REQUEST, UserAlreadyExistsException.class),
-    SUCCESS("1", ResponseStatus.PASSED),
-    ERROR("2", ResponseStatus.ERROR);
+    SUCCESS("SUC001", ResponseStatus.PASSED),
+    ERROR("ERR001", ResponseStatus.ERROR);
 
     @Getter
     private final String code;

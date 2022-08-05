@@ -7,10 +7,11 @@ public enum MemberType {
     public static MemberType getBySalary(Double salary) {
         if(salary <= 30000) {
             return SLIVER;
+        }else {
+            if (salary <= 50000) {
+                return GOLD;
+            } else
+                return PLATINUM;
         }
-        if (salary <= 50000) {
-            return GOLD;
-        }
-        return PLATINUM;
     }
 }
