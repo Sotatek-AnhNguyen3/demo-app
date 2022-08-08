@@ -130,6 +130,8 @@ Scalability of a system is complex, it depends not only on the business of each 
 
   Can refer : [Domain-driven Design (DDD)](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice)
 
+   ![image](https://user-images.githubusercontent.com/49465547/183387527-898fc555-cd61-46a1-b7bf-19236564389c.png)
+
 - There are systems that need to design more caching, type of database or apply message brokers systems like Kafka.
 
 - Because of the limitation of the topic from your side, we simply put to scaling the microservices in the system to serve the increased heavy load when there are many   user requests.
