@@ -116,11 +116,12 @@ Spring cloud support all that features.
 Please refer  :
 [Saga pattern](https://www.baeldung.com/cs/saga-pattern-microservices) (https://www.baeldung.com/cs/saga-pattern-microservices)
 
-3.To perform query on multiple services we can use: API Composition or Command Query Responsibility Segregation (CQRS)
+3.To perform query on multiple services we can use: Domain-driven design (DDD) with Command Query Responsibility Segregation (CQRS)
 ![img_2.png](img_2.png)
 
 Please refer :
 [ CQRS](https://www.baeldung.com/cqrs-event-sourcing-java)
+[Domain-driven design(DDD)] (https://docs.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice)
 
 4.Scalability: 
 Scalability of a system is complex, it depends not only on the business of each system but also may need to change the design of the system.
