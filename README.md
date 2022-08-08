@@ -114,28 +114,30 @@ Spring cloud support all that features.
 ![img_1.png](img_1.png)
 
 Please refer  :
-[Saga pattern](https://www.baeldung.com/cs/saga-pattern-microservices) (https://www.baeldung.com/cs/saga-pattern-microservices)
+[Saga pattern](https://microservices.io/patterns/data/saga.html)
 
-3.To perform query on multiple services we can use: Domain-driven design (DDD) with Command Query Responsibility Segregation (CQRS)
+3.To perform query on multiple services we can use:  Command Query Responsibility Segregation (CQRS)
 ![img_2.png](img_2.png)
 
 Please refer :
-[ CQRS](https://www.baeldung.com/cqrs-event-sourcing-java)
-[Domain-driven design(DDD)] (https://docs.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice)
+[ CQRS](https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs)
+
 
 4.Scalability: 
 Scalability of a system is complex, it depends not only on the business of each system but also may need to change the design of the system.
 
-Example: 
+- The method approach can be used: Domain-driven Design (DDD)
 
-There are systems that need to design more caching, type of database or apply message brokers systems like Kafka.
+  Can refer : [Domain-driven Design (DDD)](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice)
 
-Because of the limitation of the topic from your side, we simply put to scaling the microservices in the system to serve the increased heavy load when there are many user requests.
+- There are systems that need to design more caching, type of database or apply message brokers systems like Kafka.
 
-With that condition we can apply Kubernetes to scale up microservice on our system.
+- Because of the limitation of the topic from your side, we simply put to scaling the microservices in the system to serve the increased heavy load when there are many   user requests.
 
-Demo spring microservice system deploy on kubernetes
-![Spring microservice system deploy on kubernetes](https://i0.wp.com/piotrminkowski.com/wp-content/uploads/2020/11/spring-boot-autoscaler-on-kubernetes-arch.png)
+  With that condition we can apply Kubernetes to scale up microservice on our system.
+
+  Demo spring microservice system deploy on kubernetes
+  ![Spring microservice system deploy on kubernetes](https://i0.wp.com/piotrminkowski.com/wp-content/uploads/2020/11/spring-boot-autoscaler-on-kubernetes-arch.png)
 
 ### Guides
 The following guides illustrate how to use some features concretely:
